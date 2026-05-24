@@ -2,6 +2,16 @@
 
 A professional module for Post Automation, part of the DMA Web Platform.
 
+# Screenshots
+
+# Hastags Generated
+
+<img width="1549" height="885" alt="image" src="https://github.com/user-attachments/assets/ceb24fd5-3fe4-42fc-a4bf-f7364c223ae5" />
+
+# Image Generated and Published on Instagram
+
+<img width="1580" height="893" alt="image" src="https://github.com/user-attachments/assets/a09667a3-2fdc-49b6-af3c-1309cef2e5ba" />
+
 ---
 
 ## 🚀 Quick Start
