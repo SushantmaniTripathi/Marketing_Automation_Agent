@@ -1,0 +1,162 @@
+2026-04-23 15:53:30,865 - DMA_Web - INFO - 🚀 DMA Web starting on port 5000
+2026-04-23 15:53:30,960 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.50:5000
+2026-04-23 15:53:30,960 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-23 15:53:39,386 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:53:39] "GET / HTTP/1.1" 200 -
+2026-04-23 15:53:39,990 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:53:39] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-04-23 15:53:39,991 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:53:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-23 15:53:41,467 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:53:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 15:53:43,477 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:53:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-23 15:54:41,962 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:54:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 15:55:41,910 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:55:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 15:56:41,896 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:56:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 15:57:40,933 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:57:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 15:58:33,506 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 15:58:33,626 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:58:33] "GET /api/post/trends HTTP/1.1" 200 -
+2026-04-23 15:58:40,923 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:58:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 15:59:07,968 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 15:59:09,703 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 15:59:09,714 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:59:09] "POST /api/post/caption HTTP/1.1" 200 -
+2026-04-23 15:59:18,189 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 15:59:18,213 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:59:18] "POST /api/post/hashtags HTTP/1.1" 200 -
+2026-04-23 15:59:40,923 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 15:59:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:00:14,133 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:00:14] "POST /api/post/image HTTP/1.1" 200 -
+2026-04-23 16:00:14,193 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:00:14] "GET /api/post/generated-image/generated_1776940213.png HTTP/1.1" 200 -
+2026-04-23 16:00:40,920 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:00:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:01:25,579 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:01:40,829 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:01:40] "POST /api/seo/research HTTP/1.1" 200 -
+2026-04-23 16:01:40,923 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:01:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:02:41,112 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:02:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:03:03,113 - modules.seo_engine - INFO - Scanning https://decentrawood.com for broken links...
+2026-04-23 16:03:29,373 - modules.seo_engine - INFO - ✅ Broken link scan complete. Found 0 broken links.
+2026-04-23 16:03:29,387 - modules.seo_engine - INFO - ✅ Technical audit complete for https://decentrawood.com
+2026-04-23 16:03:37,479 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:03:37,513 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:03:37] "POST /api/seo/technical HTTP/1.1" 200 -
+2026-04-23 16:03:39,945 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:03:39,962 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:03:39] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:03:40,922 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:03:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:04:40,926 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:04:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:04:54,856 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:04:54,867 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:04:54] "POST /api/seo/backlinks HTTP/1.1" 200 -
+2026-04-23 16:05:40,919 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:05:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:06:31,031 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:06:31,041 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:06:31] "POST /api/seo/autopost/preview HTTP/1.1" 200 -
+2026-04-23 16:06:40,919 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:06:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:06:51,897 - modules.backlinks - INFO - ✅ Posted to Dev.to: https://dev.to/vera_neo/unlock-5000-worth-of-deod-with-decentrawood-your-gateway-to-the-future-of-entertainment-3iom (published)
+2026-04-23 16:06:51,913 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:06:51] "POST /api/seo/autopost/publish HTTP/1.1" 200 -
+2026-04-23 16:07:41,451 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:07:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:08:41,897 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:08:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:09:41,917 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:09:41] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:09:45,260 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:09:45] "GET / HTTP/1.1" 200 -
+2026-04-23 16:09:45,391 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:09:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:09:45,412 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:09:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:09:46,014 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:09:46] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:10:08,633 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:10:08] "GET / HTTP/1.1" 200 -
+2026-04-23 16:10:08,820 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:10:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:10:08,829 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:10:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:10:09,425 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:10:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:10:46,722 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:10:46,731 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:10:46] "GET /api/post/trends HTTP/1.1" 200 -
+2026-04-23 16:11:05,355 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:11:05,363 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:11:05] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:11:09,428 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:11:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:11:42,455 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:11:44,374 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:11:44,381 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:11:44] "POST /api/post/caption HTTP/1.1" 200 -
+2026-04-23 16:11:50,449 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:11:50,458 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:11:50] "POST /api/post/hashtags HTTP/1.1" 200 -
+2026-04-23 16:12:09,431 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:12:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:12:11,760 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:12:11] "POST /api/post/image HTTP/1.1" 200 -
+2026-04-23 16:12:11,812 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:12:11] "GET /api/post/generated-image/generated_1776940931.png HTTP/1.1" 200 -
+2026-04-23 16:13:09,901 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:13:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:14:09,895 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:14:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:15:09,431 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:15:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:16:09,933 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:16:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:17:09,902 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:17:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:18:10,895 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:18:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:19:11,908 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:11] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:19:21,682 - DMA_Web - INFO - 🚀 DMA Web starting on port 5000
+2026-04-23 16:19:21,756 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.50:5000
+2026-04-23 16:19:21,756 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-23 16:19:27,015 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:27] "GET / HTTP/1.1" 200 -
+2026-04-23 16:19:27,617 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:19:27,622 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:27] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-04-23 16:19:28,447 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:28] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:19:32,349 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:32] "GET / HTTP/1.1" 200 -
+2026-04-23 16:19:32,437 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:19:32,441 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:19:32,559 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:19:32] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:20:33,079 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:20:33] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:21:32,566 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:21:32] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:21:34,569 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:21:34] "GET / HTTP/1.1" 200 -
+2026-04-23 16:21:34,716 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:21:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:21:34,736 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:21:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:21:35,008 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:21:35] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:22:08,449 - DMA_Web - ERROR - SEO performance error: embedded null character
+2026-04-23 16:22:08,451 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:22:08] "[35m[1mPOST /api/seo/performance HTTP/1.1[0m" 500 -
+2026-04-23 16:22:11,448 - DMA_Web - ERROR - SEO performance error: embedded null character
+2026-04-23 16:22:11,448 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:22:11] "[35m[1mPOST /api/seo/performance HTTP/1.1[0m" 500 -
+2026-04-23 16:22:14,648 - DMA_Web - ERROR - SEO performance error: embedded null character
+2026-04-23 16:22:14,655 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:22:14] "[35m[1mPOST /api/seo/performance HTTP/1.1[0m" 500 -
+2026-04-23 16:22:17,267 - DMA_Web - ERROR - SEO performance error: embedded null character
+2026-04-23 16:22:17,267 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:22:17] "[35m[1mPOST /api/seo/performance HTTP/1.1[0m" 500 -
+2026-04-23 16:24:02,487 - DMA_Web - INFO - 🚀 DMA Web starting on port 5000
+2026-04-23 16:24:02,556 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.50:5000
+2026-04-23 16:24:02,556 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-23 16:24:05,406 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:05] "GET / HTTP/1.1" 200 -
+2026-04-23 16:24:05,809 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:05] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-04-23 16:24:05,813 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:24:05,908 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:24:08,530 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:08] "GET / HTTP/1.1" 200 -
+2026-04-23 16:24:08,603 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:24:08,610 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:24:08,747 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:08] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:24:20,227 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:20] "GET / HTTP/1.1" 200 -
+2026-04-23 16:24:20,445 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:24:20,451 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:24:21,193 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:21] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:24:31,975 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:24:31] "POST /api/login HTTP/1.1" 200 -
+2026-04-23 16:25:06,004 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:25:06,121 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:25:06] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:25:21,201 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:25:21] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:25:28,913 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:25:28,919 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:25:28] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:25:48,490 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:25:48,495 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:25:48] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:26:08,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:26:08,912 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:26:08] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:26:21,217 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:26:21] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:26:56,488 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:26:56] "GET / HTTP/1.1" 200 -
+2026-04-23 16:26:56,620 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:26:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:26:56,625 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:26:56] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:26:56,872 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:26:56] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:27:56,881 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:27:56] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:28:56,877 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:28:56] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:29:56,873 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:29:56] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:32:19,127 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:32:19] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:32:43,513 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:32:43] "POST /api/login HTTP/1.1" 200 -
+2026-04-23 16:32:56,876 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:32:56] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:33:56,873 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:33:56] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:38:03,118 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:38:03] "GET / HTTP/1.1" 200 -
+2026-04-23 16:38:03,370 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:38:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-23 16:38:03,399 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:38:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-04-23 16:38:04,144 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:38:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:38:18,466 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:38:18] "POST /api/login HTTP/1.1" 200 -
+2026-04-23 16:38:44,738 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-23 16:38:44,801 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:38:44] "POST /api/seo/performance HTTP/1.1" 200 -
+2026-04-23 16:39:04,150 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:39:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:40:04,157 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:40:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:41:04,158 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:41:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:42:04,154 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:42:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 16:43:04,145 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 16:43:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 17:11:15,465 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 17:11:15] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 17:15:00,407 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 17:15:00] "GET /api/health HTTP/1.1" 200 -
+2026-04-23 17:15:04,909 - werkzeug - INFO - 192.168.1.50 - - [23/Apr/2026 17:15:04] "GET /api/health HTTP/1.1" 200 -

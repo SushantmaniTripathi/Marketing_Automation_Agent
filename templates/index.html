@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing Automation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="app-locked">
+
+<!-- Ambient background -->
+<div class="ambient-bg">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- Login overlay -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-card">
+    <div class="login-badge">Secure Access</div>
+    <h1 class="login-title">Digital Marketing Automation</h1>
+    <p class="login-subtitle">Sign in to continue to Post Automation and SEO tools.</p>
+
+    <form class="login-form" id="loginForm">
+      <label class="field-label" for="login-username">Username</label>
+      <input type="text" id="login-username" class="input-field" autocomplete="username" placeholder="Enter username">
+
+      <label class="field-label" for="login-password">Password</label>
+      <input type="password" id="login-password" class="input-field" autocomplete="current-password" placeholder="Enter password">
+
+      <button type="submit" class="btn-primary login-btn">Login</button>
+    </form>
+
+    <div class="login-error" id="loginError"></div>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark">
+      <span class="logo-icon">◈</span>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">Marketing Agent</span>
+      <span class="logo-sub">Decentrawood Platform</span>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <span class="nav-label">Modules</span>
+    <button class="nav-item active" data-tab="post">
+      <span class="nav-icon">◎</span>
+      <span>Post Automation</span>
+      <span class="nav-badge">IG</span>
+    </button>
+    <button class="nav-item" data-tab="seo">
+      <span class="nav-icon">◈</span>
+      <span>SEO Automation</span>
+      <span class="nav-badge">AI</span>
+    </button>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="health-indicator" id="healthDots">
+      <span class="health-dot" id="hd-openai" title="OpenAI"></span>
+      <span class="health-dot" id="hd-instagram" title="Instagram"></span>
+      <span class="health-dot" id="hd-gsc" title="GSC"></span>
+    </div>
+    <span class="health-label">API Status</span>
+    <button onclick="logout()" style="margin-top: 15px; width: 100%; padding: 8px; background: rgba(255, 77, 77, 0.1); border: 1px solid rgba(255, 77, 77, 0.2); color: #ff4d4d; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; font-family: inherit; transition: all 0.2s ease;">
+      <span style="font-size: 14px;">⏻</span> Logout
+    </button>
+  </div>
+</nav>
+
+<!-- Main content -->
+<main class="main-content">
+
+  <!-- ══════════ POST AUTOMATION TAB ══════════ -->
+  <section class="tab-content active" id="tab-post">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Post Automation</h1>
+        <p class="page-sub">Generate & publish AI-crafted Instagram content in 4 steps</p>
+      </div>
+      <div class="step-tracker">
+        <div class="step-dot active" data-step="1">1</div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="2">2</div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="3">3</div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="4">4</div>
+      </div>
+    </div>
+
+    <!-- Step 1: Topic Input -->
+    <div class="step-panel active" id="post-step-1">
+      <div class="card card-wide">
+        <div class="card-head">
+          <span class="step-badge">Step 01</span>
+          <h2>Enter Your Topic</h2>
+          <p>What do you want to post about today?</p>
+        </div>
+        <div class="input-group">
+          <input type="text" id="post-topic" class="input-field" placeholder="e.g. Web3 Gaming metaverse avatars...">
+          <button class="btn-primary" onclick="postStep1()">
+            <span>Generate Hashtags</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+        <div class="action-row" style="margin-top:0;margin-bottom:12px;">
+          <button class="btn-secondary" onclick="loadTodaysTrends()" id="btn-post-trends">Today's Trends</button>
+        </div>
+        <div class="example-chips">
+          <button class="chip" onclick="fillTopic('AI Music Generation rewards')">AI Music Generation</button>
+          <button class="chip" onclick="fillTopic('Web3 Gaming metaverse avatars')">Web3 Gaming</button>
+          <button class="chip" onclick="fillTopic('Decentralized Social Identity')">DeSoc Identity</button>
+          <button class="chip" onclick="fillTopic('NFT Art collections blockchain')">NFT Art</button>
+        </div>
+        <div id="trends-result" class="result-block" style="margin-top:14px; display:none;"></div>
+      </div>
+    </div>
+
+    <!-- Step 2: Caption -->
+    <div class="step-panel" id="post-step-2">
+      <div class="card card-wide">
+        <div class="card-head">
+          <span class="step-badge">Step 02</span>
+          <h2>Caption & Hashtags</h2>
+          <p>AI-generated caption — approve or regenerate</p>
+        </div>
+        <div class="result-block" id="hashtags-result"></div>
+        <div class="divider"></div>
+        <div class="result-block" id="caption-result"></div>
+        <div class="action-row">
+          <button class="btn-secondary" onclick="postGoBack(1)">← Back</button>
+          <button class="btn-secondary" onclick="stopPostFlow()">⏹ Stop</button>
+          <button class="btn-secondary" onclick="regenerateCaption()">↺ Regenerate Caption</button>
+          <button class="btn-primary" onclick="postStep2()">
+            <span>Generate Image</span><span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Image -->
+    <div class="step-panel" id="post-step-3">
+      <div class="card card-wide">
+        <div class="card-head">
+          <span class="step-badge">Step 03</span>
+          <h2>AI Generated Image</h2>
+          <p>Our AI handles the canvas; you handle the vision.</p>
+        </div>
+        <div class="image-preview" id="image-preview">
+          <div class="image-loader">
+            <div class="spinner-ring"></div>
+            <span>Generating Image...</span>
+          </div>
+        </div>
+        <div class="action-row">
+          <button class="btn-secondary" onclick="postGoBack(2)">← Back</button>
+          <button class="btn-secondary" onclick="stopPostFlow()">⏹ Stop</button>
+          <button class="btn-secondary" onclick="regenerateImage()">↺ Regenerate Image</button>
+          <button class="btn-primary" onclick="postStep3()">
+            <span>Proceed to Publish</span><span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4: Publish -->
+    <div class="step-panel" id="post-step-4">
+      <div class="card card-wide">
+        <div class="card-head">
+          <span class="step-badge">Step 04</span>
+          <h2>Publish to Instagram</h2>
+          <p>Post now or schedule for later</p>
+        </div>
+        <div class="publish-preview" id="publish-preview"></div>
+        <div class="schedule-row">
+          <label class="toggle-label">
+            <input type="checkbox" id="schedule-toggle" onchange="toggleSchedule()">
+            <span class="toggle-switch"></span>
+            <span>Schedule for later</span>
+          </label>
+          <div class="schedule-time hidden" id="schedule-time-input">
+            <input type="datetime-local" id="schedule-dt" class="input-field-sm">
+          </div>
+        </div>
+        <div class="action-row">
+          <button class="btn-secondary" onclick="postGoBack(3)">← Back</button>
+          <button class="btn-secondary" onclick="stopPostFlow()">⏹ Stop</button>
+          <button class="btn-publish" onclick="publishPost()">
+            <span class="publish-icon">◎</span>
+            <span>Publish to Instagram</span>
+          </button>
+        </div>
+        <div id="publish-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SEO AUTOMATION TAB ══════════ -->
+  <section class="tab-content" id="tab-seo">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">SEO Automation</h1>
+        <p class="page-sub">Full pipeline: keyword research → audit → backlinks → report</p>
+      </div>
+      <button class="btn-primary btn-sm" onclick="runFullSEO()">
+        <span>⚡ Run Full Pipeline</span>
+      </button>
+    </div>
+
+    <!-- Topic Input -->
+    <div class="card card-wide" id="seo-topic-card">
+      <div class="card-head">
+        <span class="step-badge">Topic</span>
+        <h2>Set Your SEO Topic</h2>
+      </div>
+      <div class="input-group">
+        <input type="text" id="seo-topic" class="input-field" placeholder="e.g. Web3 Gaming metaverse avatars...">
+        <button class="btn-primary" onclick="setSEOTopic()">Set Topic →</button>
+      </div>
+    </div>
+
+    <!-- SEO Steps Grid -->
+    <div class="seo-grid" id="seo-steps-grid">
+
+      <!-- Step 1: Keyword Research -->
+      <div class="seo-card" id="seo-card-research">
+        <div class="seo-card-header">
+          <div class="seo-card-icon">🔍</div>
+          <div>
+            <h3>Keywords + Research</h3>
+            <p>GSC data + AI keyword expansion</p>
+          </div>
+          <span class="seo-status" id="seo-status-research">—</span>
+        </div>
+        <button class="btn-seo" onclick="runSEOStep('research')" id="btn-seo-research">
+          Run Research →
+        </button>
+        <div class="seo-result" id="seo-result-research"></div>
+      </div>
+
+      <!-- Step 2: Technical Audit -->
+      <div class="seo-card" id="seo-card-technical">
+        <div class="seo-card-header">
+          <div class="seo-card-icon">🔧</div>
+          <div>
+            <h3>Technical Audit</h3>
+            <p>Site health, speed & structure checks</p>
+          </div>
+          <span class="seo-status" id="seo-status-technical">—</span>
+        </div>
+        <button class="btn-seo" onclick="runSEOStep('technical')" id="btn-seo-technical">
+          Run Audit →
+        </button>
+        <div class="seo-result" id="seo-result-technical"></div>
+      </div>
+
+      <!-- Step 3: Backlink Strategy -->
+      <div class="seo-card" id="seo-card-backlinks">
+        <div class="seo-card-header">
+          <div class="seo-card-icon">🔗</div>
+          <div>
+            <h3>Backlink Strategy</h3>
+            <p>Anchor texts, outreach & platforms</p>
+          </div>
+          <span class="seo-status" id="seo-status-backlinks">—</span>
+        </div>
+        <button class="btn-seo" onclick="runSEOStep('backlinks')" id="btn-seo-backlinks">
+          Build Strategy →
+        </button>
+        <div class="seo-result" id="seo-result-backlinks"></div>
+      </div>
+
+      <!-- Step 4: Performance Report -->
+      <div class="seo-card" id="seo-card-performance">
+        <div class="seo-card-header">
+          <div class="seo-card-icon">📊</div>
+          <div>
+            <h3>Performance Report</h3>
+            <p>GA4 & GSC analytics summary</p>
+          </div>
+          <span class="seo-status" id="seo-status-performance">—</span>
+        </div>
+        <div class="input-group" style="margin-bottom:10px; max-width:260px;">
+          <select id="seo-performance-period" class="input-field-sm" aria-label="Performance report period">
+            <option value="month" selected>This Month</option>
+            <option value="year">This Year</option>
+          </select>
+        </div>
+        <button class="btn-seo" onclick="runSEOStep('performance')" id="btn-seo-performance">
+          Get Report →
+        </button>
+        <div class="seo-result" id="seo-result-performance"></div>
+      </div>
+
+      <!-- Step 5: Auto-Post Blogs -->
+      <div class="seo-card seo-card-wide" id="seo-card-autopost">
+        <div class="seo-card-header">
+          <div class="seo-card-icon">🚀</div>
+          <div>
+            <h3>Auto-Post Blogs</h3>
+            <p>Preview, refine, then publish to Dev.to & Hashnode</p>
+          </div>
+          <span class="seo-status" id="seo-status-autopost">—</span>
+        </div>
+        <div class="platform-checks">
+          <label class="plat-check">
+            <input type="checkbox" id="plat-devto" checked>
+            <span class="plat-icon">Dev.to</span>
+          </label>
+          <label class="plat-check">
+            <input type="checkbox" id="plat-hashnode" checked>
+            <span class="plat-icon">Hashnode</span>
+          </label>
+        </div>
+        <div class="autopost-actions">
+          <button class="btn-seo" onclick="generateSEOAutopostPreview(false)" id="btn-seo-autopost-generate">
+            Preview
+          </button>
+          <button class="btn-seo" onclick="generateSEOAutopostPreview(true)" id="btn-seo-autopost-humanize">
+            Regenerate
+          </button>
+          <button class="btn-seo" onclick="publishSEOAutopost()" id="btn-seo-autopost-publish" disabled>
+            Publish Selected Platforms →
+          </button>
+        </div>
+        <div class="autopost-preview" id="seo-autopost-preview">
+          <p class="autopost-placeholder">Generate preview to review and edit the blog before publishing.</p>
+        </div>
+        <div class="seo-result" id="seo-result-autopost"></div>
+      </div>
+
+      <!-- Step 6: PDF Report -->
+      <div class="seo-card" id="seo-card-pdf">
+        <div class="seo-card-header">
+          <div class="seo-card-icon">📄</div>
+          <div>
+            <h3>PDF Report</h3>
+            <p>Download full SEO analysis</p>
+          </div>
+          <span class="seo-status" id="seo-status-pdf">—</span>
+        </div>
+        <button class="btn-seo" onclick="downloadPDF()" id="btn-seo-pdf">
+          Generate PDF →
+        </button>
+        <div class="seo-result" id="seo-result-pdf"></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Toast notifications -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Loading overlay -->
+<div class="loading-overlay hidden" id="loadingOverlay">
+  <div class="loading-card">
+    <div class="spinner-ring large"></div>
+    <p class="loading-text" id="loadingText">Processing...</p>
+  </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
