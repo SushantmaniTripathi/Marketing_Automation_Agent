@@ -4,7 +4,7 @@ A professional module for Post Automation, part of the DMA Web Platform.
 
 # Screenshots
 
-# Hastags Generated
+# Trending Hastags Generated and can be Editable 
 
 <img width="1549" height="885" alt="image" src="https://github.com/user-attachments/assets/ceb24fd5-3fe4-42fc-a4bf-f7364c223ae5" />
 
