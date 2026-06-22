@@ -1,4 +1,4 @@
-# Marketing Agent Syatem
+# Marketing Agent System
 
 A professional module for Marketing System Automation, part of the DMA Web Platform.
 
