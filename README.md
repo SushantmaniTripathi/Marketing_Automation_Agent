@@ -1,6 +1,6 @@
-# Social Automation Agent
+# Marketing Agent Syatem
 
-A professional module for Post Automation, part of the DMA Web Platform.
+A professional module for Marketing System Automation, part of the DMA Web Platform.
 
 # Screenshots
 
