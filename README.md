@@ -4,7 +4,7 @@ A professional module for Marketing System Automation, part of the DMA Web Platf
 
 # Screenshots
 
-# Trending Hastags Generated and can be Editable 
+# Assigned Trending Hastags as per TOPIC and can be Editable 
 
 <img width="1549" height="885" alt="image" src="https://github.com/user-attachments/assets/ceb24fd5-3fe4-42fc-a4bf-f7364c223ae5" />
 
