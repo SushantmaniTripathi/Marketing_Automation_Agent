@@ -11,7 +11,7 @@ Engineered an automated Instagram posting workflow with Trendings captions, hash
 
 <img width="1549" height="885" alt="image" src="https://github.com/user-attachments/assets/ceb24fd5-3fe4-42fc-a4bf-f7364c223ae5" />
 
-# Image Generated and Published on Instagram
+# Image Generated with cutomized logo & Branding and Published on Instagram 
 
 <img width="1580" height="893" alt="image" src="https://github.com/user-attachments/assets/a09667a3-2fdc-49b6-af3c-1309cef2e5ba" />
 
@@ -87,7 +87,7 @@ DMA_Web/
 
 1. **Step 1** — Enter a topic → AI generates hashtags (via Instagram Graph API + OpenAI fallback)
 2. **Step 2** — Review hashtags + AI-generated caption (approve or regenerate)
-3. **Step 3** — AI generates image via Ideogram API (approve or regenerate)
+3. **Step 3** — AI generates image via API (approve or regenerate)
 4. **Step 4** — Publish immediately or schedule for later
 
 ## 🔧 Troubleshooting
