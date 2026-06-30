@@ -1,6 +1,9 @@
-# Marketing Agent System
+# Marketing Automation Agent System
 
-A professional module for Marketing System Automation, part of the DMA Web Platform.
+A professional module for Marketing System Automation,Engineered autonomous AI platform generating SEO-optimized blogs, website content, keyword intelligence, social media creatives, and
+Automation Agent that reduced manual content creation time by 90%, generating trending posts, captions, hashtags, and branded
+creatives in under 2 minutes.
+Engineered an automated Instagram posting workflow with Trendings captions, hashtags, and creatives, improving content production
 
 # Screenshots
 
