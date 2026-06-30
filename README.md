@@ -1,99 +1,226 @@
-# Marketing Automation Agent System
+# 🚀 Marketing Automation Agent System
 
-A professional module for Marketing System Automation,Engineered autonomous AI platform generating SEO-optimized blogs, website content, keyword intelligence, social media creatives, and
-Automation Agent that reduced manual content creation time by 90%, generating trending posts, captions, hashtags, and branded
-creatives in under 2 minutes.
-Engineered an automated Instagram posting workflow with Trendings captions, hashtags, and creatives, improving content production
+<div align="center">
 
-# Screenshots
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Instagram API](https://img.shields.io/badge/Instagram_Graph_API-E4405F?style=for-the-badge&logo=instagram&logoColor=white)
 
-# Assigned Trending Hastags as per TOPIC and can be Editable 
+![Ideogram](https://img.shields.io/badge/Ideogram_AI-6C47FF?style=for-the-badge)
+![Automation](https://img.shields.io/badge/Workflow_Automation-FF6B00?style=for-the-badge)
+![SEO](https://img.shields.io/badge/SEO_Optimization-0AA545?style=for-the-badge)
+![REST API](https://img.shields.io/badge/REST_API-0096D6?style=for-the-badge)
+
+</div>
+
+---
+
+## 📌 Overview
+
+A production-ready **AI-powered Marketing Automation System** built to automate end-to-end content generation and social media publishing.
+
+The system autonomously generates:
+
+- SEO-optimized blogs and website content  
+- Keyword intelligence and trend analysis  
+- Social media creatives with custom branding  
+- AI-generated captions and trending hashtags  
+- Automated Instagram publishing workflow  
+
+### Key Impact
+
+✔ Reduced manual content creation time by **90%**  
+✔ Generated branded social media creatives in **under 2 minutes**  
+✔ Automated hashtag generation based on topic relevance  
+✔ Built an end-to-end Instagram publishing pipeline  
+
+---
+
+# ⚡ System Architecture
+
+```text
+User Input Topic
+       ↓
+Trend Analysis Engine
+       ↓
+AI Caption Generation
+       ↓
+Hashtag Recommendation Engine
+       ↓
+Brand-Aware Image Generation
+       ↓
+Content Approval Pipeline
+       ↓
+Instagram Auto Publishing
+```
+
+---
+
+# 📸 Screenshots
+
+## Assigned Trending Hashtags Based on Topic (Editable)
 
 <img width="1549" height="885" alt="image" src="https://github.com/user-attachments/assets/ceb24fd5-3fe4-42fc-a4bf-f7364c223ae5" />
 
-# Image Generated with cutomized logo & Branding and Published on Instagram 
+---
+
+## AI Generated Creative with Custom Branding + Auto Published on Instagram
 
 <img width="1580" height="893" alt="image" src="https://github.com/user-attachments/assets/a09667a3-2fdc-49b6-af3c-1309cef2e5ba" />
 
 ---
 
-## 🚀 Quick Start
+# 🚀 Quick Start
 
-### 1. Install Python dependencies
+### 1. Install Dependencies
+
 ```bash
 pip install -r ../requirements.txt
 ```
 
-### 2. Configure credentials
+### 2. Configure Environment Variables
+
 ```bash
 cp ../.env.example ../.env
-# Open ../.env and fill in your API keys
 ```
 
-### 3. Run the server (from root)
+Fill API credentials inside `.env`
+
+---
+
+### 3. Run Application
+
 ```bash
 cd ..
 python app.py
 ```
 
-### 4. Open browser
-```
+---
+
+### 4. Open Browser
+
+```bash
 http://localhost:5000
 ```
 
 ---
 
-## 📁 Project Structure (Social Agent Context)
+# 📁 Project Structure
 
-```
+```text
 DMA_Web/
-├── app.py                  ← Flask web server (main entry point)
-├── post_routes.py          ← Instagram Post Automation logic
-├── requirements.txt        ← Python dependencies
-├── .env.example            ← Credentials template (copy to .env)
+├── app.py                         # Flask server entry point
+├── post_routes.py                # Instagram automation logic
+├── requirements.txt             # Dependencies
+├── .env.example                 # Environment template
 │
 ├── templates/
-│   └── index.html          ← Main UI (dark professional dashboard)
+│   └── index.html              # Dashboard UI
 │
 ├── static/
-│   ├── css/style.css       ← Dark theme styles
-│   └── js/app.js           ← Frontend logic
+│   ├── css/style.css          # Styling
+│   └── js/app.js              # Frontend logic
 │
-├── Social_Agent/           ← Instagram posting modules (This directory)
+├── Social_Agent/
 │   ├── instagram_graph_api.py
-│   └── src/modules/ai/ideogram_gen.py  ← Image generation
+│   └── src/modules/ai/
+│        └── ideogram_gen.py
 │
-├── data/generated_images/  ← AI-generated images stored here
-└── logs/                   ← App logs
+├── data/generated_images/      # Generated creatives
+└── logs/                       # Application logs
 ```
 
 ---
 
-## 🔑 Required Credentials (.env)
+# 🔑 Required Credentials
 
-### Core AI
-| Variable | Where to get |
-|----------|-------------|
-| `OPENAI_API_KEY` | https://platform.openai.com/api-keys |
-| `IDEOGRAM_API_KEY` | https://ideogram.ai/manage-api |
+## Core AI APIs
 
-### Post Automation (Instagram)
-| Variable | Where to get |
-|----------|-------------|
-| `INSTAGRAM_TOKEN_1` | Meta Developer Portal → your App → Instagram Graph API |
-| `INSTAGRAM_ID_1` | Your Instagram Business Account ID |
+| Variable | Description |
+|-----------|------------|
+| `OPENAI_API_KEY` | OpenAI API Access |
+| `IDEOGRAM_API_KEY` | Ideogram API Access |
 
-## 🧭 How Post Automation Works
+---
 
-1. **Step 1** — Enter a topic → AI generates hashtags (via Instagram Graph API + OpenAI fallback)
-2. **Step 2** — Review hashtags + AI-generated caption (approve or regenerate)
-3. **Step 3** — AI generates image via API (approve or regenerate)
-4. **Step 4** — Publish immediately or schedule for later
+## Instagram Automation APIs
 
-## 🔧 Troubleshooting
+| Variable | Description |
+|-----------|------------|
+| `INSTAGRAM_TOKEN_1` | Instagram Graph API Token |
+| `INSTAGRAM_ID_1` | Instagram Business Account ID |
 
-**`ModuleNotFoundError`** — Run `pip install -r ../requirements.txt`
+---
 
-**Instagram posts failing** — Ensure your Instagram account is a Business/Creator account connected to a Facebook Page
+# 🔄 Automation Workflow
 
-**Port in use** — Change `PORT=5000` in `.env` to another port like `5001`
+### Step 1 → Topic Input
+
+User provides content topic.
+
+### Step 2 → AI Processing
+
+System generates:
+
+- Caption  
+- SEO keywords  
+- Trending hashtags  
+
+### Step 3 → Creative Generation
+
+AI generates custom branded image.
+
+### Step 4 → Review Layer
+
+User can edit/regenerate content.
+
+### Step 5 → Publishing
+
+Instant Instagram publishing or scheduling.
+
+---
+
+# 📊 Performance Metrics
+
+| Metric | Result |
+|----------|--------|
+| Content Generation Speed | < 2 Minutes |
+| Manual Effort Reduction | 90% |
+| Social Content Automation | End-to-End |
+| API Integrations | 4+ Services |
+
+---
+
+# 🔧 Troubleshooting
+
+### Module Error
+
+```bash
+pip install -r ../requirements.txt
+```
+
+### Instagram Publishing Failure
+
+Ensure:
+
+- Instagram account is Business/Creator account  
+- Connected with Facebook Developer App  
+
+### Port Already In Use
+
+Change port inside `.env`
+
+```bash
+PORT=5001
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Multi-platform posting (LinkedIn, X, Facebook)  
+- Content scheduling calendar  
+- Analytics dashboard  
+- AI competitor analysis  
+- Marketing campaign automation  
