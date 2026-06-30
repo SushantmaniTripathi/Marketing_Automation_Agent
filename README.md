@@ -223,4 +223,6 @@ PORT=5001
 - Content scheduling calendar  
 - Analytics dashboard  
 - AI competitor analysis  
-- Marketing campaign automation  
+- Marketing campaign automation
+
+# Made By Sushant tripathi | AI Engineer
